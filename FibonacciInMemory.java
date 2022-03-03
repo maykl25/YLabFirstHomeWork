@@ -8,8 +8,8 @@ public class FibonacciInMemory {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             int number = Integer.parseInt(reader.readLine());
-            int[] fibNumbers = memoryFibonacci(number);
-            for (int everyNumber : fibNumbers) {
+            long[] fibNumbers = memoryFibonacci(number);
+            for (long everyNumber : fibNumbers) {
                 System.out.print(everyNumber + " ");
             }
         } catch (IOException exception) {
@@ -18,8 +18,8 @@ public class FibonacciInMemory {
     }
 
 
-public static int[] memoryFibonacci(int n) {
-    int[] numbers = new int[n];
+public static long[] memoryFibonacci(int n) {
+    long[] numbers = new long[n];
     numbers[0] = 0;
     numbers[1] = 1;
     for (int i = 2; i < n; i++) {
